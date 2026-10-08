@@ -16,4 +16,8 @@ def get_users_int(user_id: int):
 
 
 # query params
-# /users?name="govind"
+# /prices?price=400
+# handle optional parameter as well if no price is given
+@app.get("/prices")
+def get_prices(price: int = None):
+    return {"price": price}
