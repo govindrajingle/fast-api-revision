@@ -21,3 +21,10 @@ def get_users_int(user_id: int):
 @app.get("/prices")
 def get_prices(price: int = None):
     return {"price": price}
+
+
+# multiple query parameters
+# /items?name=camera&price=900
+@app.get("/items")
+def items_by_name_and_price(name: str = None, price: int = 0):
+    return {"name": name, "price": price}
