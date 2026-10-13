@@ -10,3 +10,4 @@ pytest
 httpx2
 requests
 beautifulsoup4
+slowapi
